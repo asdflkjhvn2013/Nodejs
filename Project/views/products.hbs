@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Products</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Products</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Short Desciption</th>
+                            <th>Category</th>
+                            <th>Sale Price</th>
+                            <th>Original Price</th>
+                        </tr>
+                    </thead>
+                    {{#each products }}
+                    <tr>
+                        <th>{{name}}</th>
+                        <th><img src={{image}} alt="image product" style="width:100px;height: 100px;"></th>
+                        <th>{{shortDescription}}</th>
+                        <th>{{categoryId}}</th>
+                        <th>{{salePrice}}</th>
+                        <th>{{originalPrice}}</th>
+                    </tr>
+                    {{/each}}
+                    <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Short Desciption</th>
+                            <th>Category</th>
+                            <th>Sale Price</th>
+                            <th>original Price</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
